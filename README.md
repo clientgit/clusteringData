@@ -4,10 +4,10 @@
 #### Grouping StackOverflow Q&A platform data with Spark for analysis.
 __________________________________________________________
 В этом задании алгоритм k-means группирует вопросы и ответы с платформы StackOverflow в соответствии с их оценкой.
-Расчет может быть запущен как на локально, так и паралельно на Worked Node with Spark Executors.  
+Расчет может быть запущен как локально, так и паралельно на Worked Node with Spark Executors.  
 
 ![](https://www.bigdataschool.ru/wp-content/uploads/2021/04/sparch1.png)
-##### For run
+##### For run:
 __________________________________________________________
 1. Clone this project
 2. Importing an sbt project into IntelliJ
@@ -18,7 +18,7 @@ __________________________________________________________
    -`src/main/resources/stackoverflow` in your project directory
 3. **_Run_** `src/main/scala/stackoverflow/StackOverflow.scala`
 
-##### Sample output
+##### Sample output:
 __________________________________________________________
 ```
 Resulting clusters:
@@ -47,7 +47,7 @@ Iteration: 29
             (700000,12) ==>          (700000,12)    distance:        0      // cluster 45
 ```
 
-##### K-means algorithm theory mapped to code
+##### K-means algorithm theory mapped to code:
 __________________________________________________________
 Метод k-средних используется для кластеризации данных на основе алгоритма разбиения векторного пространства на заранее определенное число кластеров k. Алгоритм представляет собой итерационную процедуру, в которой выполняются следующие шаги:
 
@@ -72,7 +72,7 @@ __________________________________________________________
 Остановка алгоритма производится тогда, когда границы кластеров и расположения центроидов не перестанут изменяться от итерации к итерации, т.е. на каждой итерации в каждом кластере будет оставаться один и тот же набор наблюдений: 
 `-> def converged(distance: Double): Boolean =`
 
-#### Some code description
+#### Some code description:
 __________________________________________________________
 ```
 val lines   = sc.textFile("pathFile")    // строки из CSV-файла
